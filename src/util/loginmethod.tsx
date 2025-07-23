@@ -19,7 +19,7 @@ export const useLogin = () => {
       if (!user) {
         throw new Error('Usuario o contraseña incorrectos');
       }
-      login(user); // Guarda el usuario logueado en el contexto
+      login(user); 
       localStorage.setItem("appuser", JSON.stringify(user))
       return user;
     } catch (err: any) {

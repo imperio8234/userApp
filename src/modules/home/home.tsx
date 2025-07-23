@@ -222,7 +222,7 @@ export const Home = () => {
 
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 w-full">
+        <div className="h-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 w-full">
             {/* Header Mejorado */}
             <header className="bg-white/90 backdrop-blur-xl border-b border-gray-200/50 sticky top-0 z-50 shadow-sm w-full">
                 <div className=" mx-auto px-6 py-4">
@@ -254,11 +254,11 @@ export const Home = () => {
                 </div>
             </header>
 
-            <div className="max-w-7xl mx-auto px-6 py-8 ">
+            <div className=" mx-auto px-6 py-8 ">
                 {/* Cards de Estadísticas */}
 
 
-                <div className="grid lg:grid-cols-4 gap-8 mt-96 md:mt-2 sm:mt-16 pt-32 md:pt-2">
+                <div className="grid lg:grid-cols-4 gap-8">
 
                     {/* Panel de Perfil Mejorado */}
                     <div className="lg:col-span-1">
