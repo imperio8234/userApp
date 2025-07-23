@@ -1,6 +1,55 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite - Sistema de Gestión de Usuarios
 
-Este template proporciona una configuración mínima para hacer funcionar React en Vite con HMR y algunas reglas de ESLint.
+Este template proporciona una configuración mínima para hacer funcionar React en Vite con HMR y algunas reglas de ESLint, implementando un sistema completo de gestión de usuarios con autenticación y panel administrativo.
+
+## 📋 Descripción de la Aplicación
+
+### Funcionalidades Principales
+
+La aplicación es un **Sistema de Gestión de Usuarios** que ofrece las siguientes características:
+
+#### 🔐 Sistema de Autenticación
+- **Login de usuarios**: Ingreso con correo electrónico y contraseña
+- **Registro de nuevos usuarios**: Formulario completo con:
+  - Nombre y apellido
+  - Correo electrónico
+  - Contraseña
+  - Foto de perfil
+- **Validación de credenciales**: Verificación contra la API de usuarios registrados
+
+#### 👥 Gestión de Usuarios desde API
+- **Consulta de usuarios**: Obtiene la lista completa de usuarios registrados desde la API
+- **Visualización organizada**: Interfaz moderna e intuitiva para mostrar la información
+- **Integración con Supabase**: Almacenamiento y gestión de datos de usuarios
+
+#### 🎛️ Panel Administrativo
+Una vez autenticado, el usuario accede a un panel completo con las siguientes funciones:
+
+##### Visualización
+- **Lista de usuarios**: Muestra todos los usuarios registrados en la plataforma
+- **Detalles de usuario**: Selección y visualización detallada de cada usuario
+- **Interfaz responsive**: Diseño moderno y adaptable a diferentes dispositivos
+
+##### Operaciones CRUD
+- **Crear usuarios**: Formulario para agregar nuevos usuarios con foto de perfil
+- **Editar usuarios**: Modificación de información existente:
+  - Cambio de foto de perfil
+  - Actualización de nombre y apellido
+  - Modificación de correo electrónico
+- **Eliminar usuarios**: Opción para remover usuarios del sistema
+
+##### Funciones de Búsqueda
+- **Búsqueda por nombre**: Filtrado de usuarios por nombre
+- **Búsqueda por correo**: Localización rápida mediante correo electrónico
+- **Filtros dinámicos**: Actualización en tiempo real de resultados
+
+#### 🔄 Flujo de Usuario
+1. **Acceso inicial**: El usuario puede elegir entre login o registro
+2. **Registro**: Si es nuevo, completa el formulario con sus datos y foto
+3. **Login**: Ingresa con correo y contraseña registrados
+4. **Dashboard**: Accede al panel administrativo con todas las funcionalidades
+5. **Gestión**: Puede ver, crear, editar, eliminar y buscar usuarios
+6. **Persistencia**: 
 
 ## 🚀 Despliegue y Configuración
 
@@ -64,6 +113,15 @@ VITE_URL_SUPABASE=https://invuyluvkhnvuxtwhmxi.supabase.co
 - `build`: Construye la aplicación para producción
 - `lint`: Ejecuta ESLint en el código
 - `preview`: Sirve la build de producción localmente
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Base de Datos**: Supabase
+- **API Externa**: ReqRes (para usuarios de prueba)
+- **Estilos**: CSS moderno con diseño responsive
+- **Autenticación**: Sistema custom con validación
 
 ## 🔧 Plugins Oficiales
 
@@ -151,6 +209,20 @@ npm run build
 # Sube el contenido de la carpeta dist/
 ```
 
+## 📸 Capturas de Pantalla
+
+> **Próximamente**: Agrega capturas de pantalla de la aplicación mostrando el login, registro, panel administrativo y funciones de gestión de usuarios.
+
+## 🤝 Contribución
+
+Si deseas contribuir al proyecto:
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
 ---
 
-¡Tu aplicación React + TypeScript + Vite está lista para correr! 🎉
+¡Tu aplicación React + TypeScript + Vite con Sistema de Gestión de Usuarios está lista para correr! 🎉
