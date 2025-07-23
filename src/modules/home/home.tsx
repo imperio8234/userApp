@@ -222,7 +222,8 @@ export const Home = () => {
 
 
     return (
-        <div className="h-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 w-full">
+        <div className=" bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 w-full h-full">
+            
             {/* Header Mejorado */}
             <header className="bg-white/90 backdrop-blur-xl border-b border-gray-200/50 sticky top-0 z-50 shadow-sm w-full">
                 <div className=" mx-auto px-6 py-4">
@@ -254,10 +255,7 @@ export const Home = () => {
                 </div>
             </header>
 
-            <div className=" mx-auto px-6 py-8 ">
-                {/* Cards de Estadísticas */}
-
-
+            <div className="pt-2 md:pr-15 md:ps-15 p-2">
                 <div className="grid lg:grid-cols-4 gap-8">
 
                     {/* Panel de Perfil Mejorado */}
@@ -329,7 +327,7 @@ export const Home = () => {
                     <div className="lg:col-span-3">
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="p-6 border-b border-gray-100">
-                                <div className="flex items-center justify-between mb-6">
+                                <div className="flex items-center justify-between mb-6 md:flex-row flex-col">
                                     <div className="flex items-center gap-3">
                                         <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
                                             <Users className="w-5 h-5 text-blue-600" />
