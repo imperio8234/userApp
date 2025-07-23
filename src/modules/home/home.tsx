@@ -258,7 +258,7 @@ export const Home = () => {
                 {/* Cards de Estadísticas */}
 
 
-                <div className="grid lg:grid-cols-4 gap-8">
+                <div className="grid lg:grid-cols-4 gap-8 mt-96 md:mt-2 sm:mt-16 pt-32 md:pt-2">
 
                     {/* Panel de Perfil Mejorado */}
                     <div className="lg:col-span-1">
