@@ -9,7 +9,7 @@ import { Home } from "./modules/home/home";
 function App() {
   const [currentView, setCurrentView] = useState('login'); 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const {login, user, logout, setUsuarios} = useUserManagement();
+  const {login, setUsuarios} = useUserManagement();
 
   
 const getUsersApi = async () => {

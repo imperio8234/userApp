@@ -18,7 +18,6 @@ export const Login = ({
         email: '',
         password: ''
     });
-    const [usuarioRegistrado, setUsuarioRegistrado] = useState(false)
 
     const { LoginMethod, loading, error } = useLogin();
     const { usuarios } = useUserManagement();

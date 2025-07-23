@@ -5,6 +5,9 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+     "noUnusedLocals": false,           // Desactiva alertas de variables locales no usadas
+    "noUnusedParameters": false,       // Desactiva alertas de parámetros no usados
+    "verbatimModuleSyntax": false,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

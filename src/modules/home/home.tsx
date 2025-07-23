@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Edit, Users, Mail, Calendar, MapPin, Settings, Bell, Search, Filter, X, Check, Trash2, Plus, MoreVertical, Star, Activity, LogOut, Upload, Camera } from 'lucide-react';
+import { Edit, Users, Mail, Settings, Search, X, Check, Trash2, Plus, MoreVertical, LogOut, Upload, Camera } from 'lucide-react';
 import { useUserManagement } from '@/context/userContext';
 import { userServiceAuth, type Usuario } from '@/services/authService/userServiceAuth';
 import { UserRegistrationForm } from './componentsUser/UserRegistrationForm';
@@ -19,7 +19,6 @@ export const Home = () => {
     ]);*/
     const [currentUser, setUserSelected] = useState<Usuario>(user?.first_name ?? usuarios[0]);
     const [usuariosFiltrados, setUsuariosFiltrados] = useState(usuarios);
-    const [usuarioEnEdicion, setUsuarioEnEdicion] = useState(null);
     const [showUserDetail, setShowUserDetail] = useState(false);
 
 
@@ -27,7 +26,7 @@ export const Home = () => {
     const [avatarPreview, setAvatarPreview] = useState(null);
     const fileInputRef = useRef<any>(null);
     const [errors, setErrors] = useState<any>({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitting] = useState(false);
 
     // paginacion:   
     const [currentPage, setCurrentPage] = useState(1);
@@ -43,7 +42,7 @@ export const Home = () => {
 
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [showFilters, setShowFilters] = useState(false);
+    const [showFilters] = useState(false);
     const [editingUser, setEditingUser] = useState<number | null>(null);
     const [activeFilter, setActiveFilter] = useState('Todos');
     const [editForm, setEditForm] = useState({
@@ -145,7 +144,7 @@ export const Home = () => {
             email: user.email,
             avatar: typeof user.avatar === 'string' ? user.avatar : ''
         });
-        setUsuarioEnEdicion(user as any);
+        
     };
 
     // Cancelar edición
@@ -157,7 +156,6 @@ export const Home = () => {
             email: '',
             avatar: ''
         });
-        setUsuarioEnEdicion(null);
     };
 
     const handleSaveEdit = async () => {

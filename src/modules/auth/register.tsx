@@ -1,28 +1,9 @@
 import { useUserManagement } from '@/context/userContext';
 import { showNotification } from '@/hooks/useNotify';
-import { userServiceAuth } from '@/services/authService/userServiceAuth';
 import { getPublicUrl, uploadFile } from '@/services/supabase/UploadFile';
 import { Eye, EyeOff, Mail, Lock, UserPlus, User, Upload, X } from 'lucide-react';
 import { useState, useRef } from 'react';
 
-// Interfaces actualizadas según el tipado
-interface Usuario {
-    id: number;
-    email: string;
-    first_name: string;
-    last_name: string;
-    avatar: string;
-}
-
-interface CreateUsuarioDto {
-    name: string;
-    job: string;
-}
-
-interface RegisterDto {
-    email: string;
-    password?: string;
-}
 
 // Tipo específico para el formulario
 interface RegisterFormData {
@@ -37,7 +18,7 @@ interface RegisterFormData {
 
 export const Register = ({ onSwitchToLogin }: { onSwitchToLogin: () => void }) => {
 
-    const { setUsuarios, usuarios } = useUserManagement();
+    const { setUsuarios } = useUserManagement();
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [avatarPreview, setAvatarPreview] = useState<string>('');
